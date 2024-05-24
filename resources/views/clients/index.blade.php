@@ -29,7 +29,11 @@
                                 <td>{{ $item->phone }}</td>
                                 <td>
                                     <a href="{{ url('/clients/' . $item->id . '/edit') }} " class="btn btn-warning">Editar</a>
-                                    <a href="" class="btn btn-danger">Apagar</a>
+                                    <form action="{{ url('/clients/' . $item->id) }}" method="post" style="display:inline" >
+                                        @method('DELETE')
+                                        {!! csrf_field() !!}
+                                        <input type="submit" class="btn btn-danger" value="Apagar"/>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach

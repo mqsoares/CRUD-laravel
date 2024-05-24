@@ -87,6 +87,7 @@ class ClientController extends Controller
      */
     public function destroy($id)
     {
-        //
+        ClientModel::destroy($id);
+        return redirect('clients');
     }
 }
