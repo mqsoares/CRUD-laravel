@@ -10,5 +10,5 @@ class ClientModel extends Model
     use HasFactory;
     protected $table = 'client';
     protected $primaryKey = 'id';
-    protected $filllable = ['name', 'email', 'mobile'];
+    protected $fillable = ['name', 'email', 'phone'];
 }
