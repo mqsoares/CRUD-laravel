@@ -28,8 +28,7 @@
                                 <td>{{ $item->email }}</td>
                                 <td>{{ $item->phone }}</td>
                                 <td>
-                                    <a href="" class="btn btn-primary">Visualizar</a>
-                                    <a href="" class="btn btn-warning">Editar</a>
+                                    <a href="{{ url('/clients/' . $item->id . '/edit') }} " class="btn btn-warning">Editar</a>
                                     <a href="" class="btn btn-danger">Apagar</a>
                                 </td>
                             </tr>

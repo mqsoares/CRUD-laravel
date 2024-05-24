@@ -60,7 +60,8 @@ class ClientController extends Controller
      */
     public function edit($id)
     {
-        //
+        $client = ClientModel::find($id);
+        return view('clients.edit')->with('clients', $client);
     }
 
     /**
@@ -72,7 +73,10 @@ class ClientController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $client = ClientModel::find($id);
+        $input = $request->all();
+        $client->update($input);
+        return redirect('clients')->with('flash_message', 'Cliente Atualizado!');
     }
 
     /**
