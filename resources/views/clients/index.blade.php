@@ -21,17 +21,19 @@
                             </tr>
                         </thead>
                         <tbody>
+                        @foreach ($clients as $item)
                             <tr>
-                                <td>1</td>
-                                <td>Miqueias</td>
-                                <td>mqseraos@gmail.com</td>
-                                <td>83 99653-2700</td>
+                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $item->name }}</td>
+                                <td>{{ $item->email }}</td>
+                                <td>{{ $item->phone }}</td>
                                 <td>
                                     <a href="" class="btn btn-primary">Visualizar</a>
                                     <a href="" class="btn btn-warning">Editar</a>
                                     <a href="" class="btn btn-danger">Apagar</a>
                                 </td>
                             </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>
