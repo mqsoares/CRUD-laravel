@@ -7,7 +7,7 @@
                     <h2>Clientes</h2>
                 </div>
                 <div class="card-body">
-                    <a href="" class="btn btn-success">Add Cliente</a>
+                    <a href="{{ url('/clients/create') }}" class="btn btn-success w-25">Add Cliente</a>
                 </div>
                 <div class="table-responsive">
                     <table class="table">
