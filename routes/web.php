@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\LivroController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RotasCotroller;
@@ -19,14 +20,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/rotas', [RotasCotroller::class, 'index']);
-Route::post('/contato', [RotasCotroller::class, 'processa']);
-
-Route::get('/contato/{id}', function ($id) {
-    str()->
-    print_r('Olá, seu id é: ' . $id);
-})->where('id', '[0-9]+');
-
-Route::resource('/livro', LivroController::class);
-
-
+Route::resource('/clients', ClientController::class);
