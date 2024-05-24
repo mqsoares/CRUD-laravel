@@ -1,11 +1,5 @@
 @extends('clients.layout')
 @section('content')
-    <div class="bg-secondary">
-        <div class="p-4">
-            <h1 class="text-warning">CRUD - Laravel</h1>
-            <small class="text-light">by Miqueias Soares / mqseraos@gmail.com</small>
-        </div>
-    </div>
     <div class="container my-5">
         <div class="row">
             <div class="col-12">
