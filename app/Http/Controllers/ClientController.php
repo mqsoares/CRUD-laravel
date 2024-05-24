@@ -36,7 +36,9 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+        ClientModel::create($input);
+        return redirect('clients')->with('flash_message', 'Cliente Adicionado!');
     }
 
     /**
